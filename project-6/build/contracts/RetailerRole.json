@@ -11,6 +11,7 @@
       "constant": true,
       "inputs": [
         {
+          "internalType": "address",
           "name": "account",
           "type": "address"
         }
@@ -18,6 +19,7 @@
       "name": "isRetailer",
       "outputs": [
         {
+          "internalType": "bool",
           "name": "",
           "type": "bool"
         }
@@ -30,6 +32,7 @@
       "constant": false,
       "inputs": [
         {
+          "internalType": "address",
           "name": "account",
           "type": "address"
         }
@@ -50,11 +53,12 @@
       "type": "function"
     }
   ],
-  "bytecode": "0x608060405234801561001057600080fd5b50610149806100206000396000f300608060405260043610610057576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680635da09b881461005c5780638ec4f505146100b7578063db0e6a2f146100fa575b600080fd5b34801561006857600080fd5b5061009d600480360381019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610111565b604051808215151515815260200191505060405180910390f35b3480156100c357600080fd5b506100f8600480360381019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610118565b005b34801561010657600080fd5b5061010f61011b565b005b6000919050565b50565b5600a165627a7a723058206c79e919b82022867357bee00c788e0579700d27b96331499533e06d23220edd0029",
-  "deployedBytecode": "0x608060405260043610610057576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680635da09b881461005c5780638ec4f505146100b7578063db0e6a2f146100fa575b600080fd5b34801561006857600080fd5b5061009d600480360381019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610111565b604051808215151515815260200191505060405180910390f35b3480156100c357600080fd5b506100f8600480360381019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610118565b005b34801561010657600080fd5b5061010f61011b565b005b6000919050565b50565b5600a165627a7a723058206c79e919b82022867357bee00c788e0579700d27b96331499533e06d23220edd0029",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"addRetailer\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"isRetailer\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"renounceRetailer\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/KHOA/Documents/training/blockchain/workspace/project-03-tracking-items-dapp/project-6/contracts/coffeeaccesscontrol/RetailerRole.sol\":\"RetailerRole\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/KHOA/Documents/training/blockchain/workspace/project-03-tracking-items-dapp/project-6/contracts/coffeeaccesscontrol/RetailerRole.sol\":{\"keccak256\":\"0xe2199b14726b121102602f3c901e4bfff252c2e3e370ef78c757bd5db9458356\",\"urls\":[\"bzz-raw://a7071e4297056bb71a2a389d9b3eb6b8a07db3f842d1086d2a3c17a152383536\",\"dweb:/ipfs/QmPqfd5hmqGg9TVgPz6yzesnA1VGCd6bUTwWc4L2NMnCKe\"]},\"/Users/KHOA/Documents/training/blockchain/workspace/project-03-tracking-items-dapp/project-6/contracts/coffeeaccesscontrol/Roles.sol\":{\"keccak256\":\"0xf3af19672e5976415b0783c457c82a8e08bbeb77ec5c366f37eed17e8fee4928\",\"urls\":[\"bzz-raw://07715019bbcb262e84472c1fe9c98cc5c181ee37318513412d9ee20a82312715\",\"dweb:/ipfs/QmQfA8LiABw7vLAmXPJaGzoEL3yFMPGXcnprn5c9cVpV64\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b50610124806100206000396000f3fe6080604052348015600f57600080fd5b5060043610603c5760003560e01c80635da09b881460415780638ec4f50514609a578063db0e6a2f1460db575b600080fd5b608060048036036020811015605557600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff16906020019092919050505060e3565b604051808215151515815260200191505060405180910390f35b60d96004803603602081101560ae57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff16906020019092919050505060ea565b005b60e160ed565b005b6000919050565b50565b56fea265627a7a72315820dd7a06d2167841e77c58b1aafeb441a37c2344889bd534c42d9c52c83a4b278264736f6c63430005100032",
+  "deployedBytecode": "0x6080604052348015600f57600080fd5b5060043610603c5760003560e01c80635da09b881460415780638ec4f50514609a578063db0e6a2f1460db575b600080fd5b608060048036036020811015605557600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff16906020019092919050505060e3565b604051808215151515815260200191505060405180910390f35b60d96004803603602081101560ae57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff16906020019092919050505060ea565b005b60e160ed565b005b6000919050565b50565b56fea265627a7a72315820dd7a06d2167841e77c58b1aafeb441a37c2344889bd534c42d9c52c83a4b278264736f6c63430005100032",
   "sourceMap": "156:1108:4:-;;;414:31;8:9:-1;5:2;;;30:1;27;20:12;5:2;414:31:4;156:1108;;;;;;",
-  "deployedSourceMap": "156:1108:4:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;630:74;;8:9:-1;5:2;;;30:1;27;20:12;5:2;630:74:4;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;765:68;;8:9:-1;5:2;;;30:1;27;20:12;5:2;765:68:4;;;;;;;;;;;;;;;;;;;;;;;;;;;;901:45;;8:9:-1;5:2;;;30:1;27;20:12;5:2;901:45:4;;;;;;630:74;688:4;630:74;;;:::o;765:68::-;;:::o;901:45::-;:::o",
-  "source": "pragma solidity ^0.4.24;\n\n// Import the library 'Roles'\nimport \"./Roles.sol\";\n\n// Define a contract 'RetailerRole' to manage this role - add, remove, check\ncontract RetailerRole {\n\n  // Define 2 events, one for Adding, and other for Removing\n  \n  // Define a struct 'retailers' by inheriting from 'Roles' library, struct Role\n\n  // In the constructor make the address that deploys this contract the 1st retailer\n  constructor() public {\n    \n  }\n\n  // Define a modifier that checks to see if msg.sender has the appropriate role\n  modifier onlyRetailer() {\n    \n    _;\n  }\n\n  // Define a function 'isRetailer' to check this role\n  function isRetailer(address account) public view returns (bool) {\n    \n  }\n\n  // Define a function 'addRetailer' that adds this role\n  function addRetailer(address account) public onlyRetailer {\n    \n  }\n\n  // Define a function 'renounceRetailer' to renounce this role\n  function renounceRetailer() public {\n    \n  }\n\n  // Define an internal function '_addRetailer' to add this role, called by 'addRetailer'\n  function _addRetailer(address account) internal {\n    \n  }\n\n  // Define an internal function '_removeRetailer' to remove this role, called by 'removeRetailer'\n  function _removeRetailer(address account) internal {\n    \n  }\n}",
+  "deployedSourceMap": "156:1108:4:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;156:1108:4;;;;;;;;;;;;;;;;;;;;;;;;;;;;;630:74;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;630:74:4;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;765:68;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;765:68:4;;;;;;;;;;;;;;;;;;;:::i;:::-;;901:45;;;:::i;:::-;;630:74;688:4;630:74;;;:::o;765:68::-;;:::o;901:45::-;:::o",
+  "source": "pragma solidity ^0.5.16;\n\n// Import the library 'Roles'\nimport \"./Roles.sol\";\n\n// Define a contract 'RetailerRole' to manage this role - add, remove, check\ncontract RetailerRole {\n\n  // Define 2 events, one for Adding, and other for Removing\n  \n  // Define a struct 'retailers' by inheriting from 'Roles' library, struct Role\n\n  // In the constructor make the address that deploys this contract the 1st retailer\n  constructor() public {\n    \n  }\n\n  // Define a modifier that checks to see if msg.sender has the appropriate role\n  modifier onlyRetailer() {\n    \n    _;\n  }\n\n  // Define a function 'isRetailer' to check this role\n  function isRetailer(address account) public view returns (bool) {\n    \n  }\n\n  // Define a function 'addRetailer' that adds this role\n  function addRetailer(address account) public onlyRetailer {\n    \n  }\n\n  // Define a function 'renounceRetailer' to renounce this role\n  function renounceRetailer() public {\n    \n  }\n\n  // Define an internal function '_addRetailer' to add this role, called by 'addRetailer'\n  function _addRetailer(address account) internal {\n    \n  }\n\n  // Define an internal function '_removeRetailer' to remove this role, called by 'removeRetailer'\n  function _removeRetailer(address account) internal {\n    \n  }\n}",
   "sourcePath": "/Users/KHOA/Documents/training/blockchain/workspace/project-03-tracking-items-dapp/project-6/contracts/coffeeaccesscontrol/RetailerRole.sol",
   "ast": {
     "absolutePath": "/Users/KHOA/Documents/training/blockchain/workspace/project-03-tracking-items-dapp/project-6/contracts/coffeeaccesscontrol/RetailerRole.sol",
@@ -71,8 +75,8 @@
         "literals": [
           "solidity",
           "^",
-          "0.4",
-          ".24"
+          "0.5",
+          ".16"
         ],
         "nodeType": "PragmaDirective",
         "src": "0:24:4"
@@ -111,8 +115,7 @@
             "documentation": null,
             "id": 254,
             "implemented": true,
-            "isConstructor": true,
-            "isDeclaredConst": false,
+            "kind": "constructor",
             "modifiers": [],
             "name": "",
             "nodeType": "FunctionDefinition",
@@ -122,7 +125,6 @@
               "parameters": [],
               "src": "425:2:4"
             },
-            "payable": false,
             "returnParameters": {
               "id": 252,
               "nodeType": "ParameterList",
@@ -171,8 +173,7 @@
             "documentation": null,
             "id": 266,
             "implemented": true,
-            "isConstructor": false,
-            "isDeclaredConst": true,
+            "kind": "function",
             "modifiers": [],
             "name": "isRetailer",
             "nodeType": "FunctionDefinition",
@@ -198,6 +199,7 @@
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "650:7:4",
+                    "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
                       "typeString": "address"
@@ -209,7 +211,6 @@
               ],
               "src": "649:17:4"
             },
-            "payable": false,
             "returnParameters": {
               "id": 264,
               "nodeType": "ParameterList",
@@ -259,8 +260,7 @@
             "documentation": null,
             "id": 274,
             "implemented": true,
-            "isConstructor": false,
-            "isDeclaredConst": false,
+            "kind": "function",
             "modifiers": [
               {
                 "arguments": null,
@@ -306,6 +306,7 @@
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "786:7:4",
+                    "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
                       "typeString": "address"
@@ -317,7 +318,6 @@
               ],
               "src": "785:17:4"
             },
-            "payable": false,
             "returnParameters": {
               "id": 272,
               "nodeType": "ParameterList",
@@ -340,8 +340,7 @@
             "documentation": null,
             "id": 278,
             "implemented": true,
-            "isConstructor": false,
-            "isDeclaredConst": false,
+            "kind": "function",
             "modifiers": [],
             "name": "renounceRetailer",
             "nodeType": "FunctionDefinition",
@@ -351,7 +350,6 @@
               "parameters": [],
               "src": "926:2:4"
             },
-            "payable": false,
             "returnParameters": {
               "id": 276,
               "nodeType": "ParameterList",
@@ -374,8 +372,7 @@
             "documentation": null,
             "id": 284,
             "implemented": true,
-            "isConstructor": false,
-            "isDeclaredConst": false,
+            "kind": "function",
             "modifiers": [],
             "name": "_addRetailer",
             "nodeType": "FunctionDefinition",
@@ -401,6 +398,7 @@
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1062:7:4",
+                    "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
                       "typeString": "address"
@@ -412,7 +410,6 @@
               ],
               "src": "1061:17:4"
             },
-            "payable": false,
             "returnParameters": {
               "id": 282,
               "nodeType": "ParameterList",
@@ -435,8 +432,7 @@
             "documentation": null,
             "id": 290,
             "implemented": true,
-            "isConstructor": false,
-            "isDeclaredConst": false,
+            "kind": "function",
             "modifiers": [],
             "name": "_removeRetailer",
             "nodeType": "FunctionDefinition",
@@ -462,6 +458,7 @@
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1226:7:4",
+                    "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
                       "typeString": "address"
@@ -473,7 +470,6 @@
               ],
               "src": "1225:17:4"
             },
-            "payable": false,
             "returnParameters": {
               "id": 288,
               "nodeType": "ParameterList",
@@ -508,8 +504,8 @@
         "literals": [
           "solidity",
           "^",
-          "0.4",
-          ".24"
+          "0.5",
+          ".16"
         ],
         "nodeType": "PragmaDirective",
         "src": "0:24:4"
@@ -548,8 +544,7 @@
             "documentation": null,
             "id": 254,
             "implemented": true,
-            "isConstructor": true,
-            "isDeclaredConst": false,
+            "kind": "constructor",
             "modifiers": [],
             "name": "",
             "nodeType": "FunctionDefinition",
@@ -559,7 +554,6 @@
               "parameters": [],
               "src": "425:2:4"
             },
-            "payable": false,
             "returnParameters": {
               "id": 252,
               "nodeType": "ParameterList",
@@ -608,8 +602,7 @@
             "documentation": null,
             "id": 266,
             "implemented": true,
-            "isConstructor": false,
-            "isDeclaredConst": true,
+            "kind": "function",
             "modifiers": [],
             "name": "isRetailer",
             "nodeType": "FunctionDefinition",
@@ -635,6 +628,7 @@
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "650:7:4",
+                    "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
                       "typeString": "address"
@@ -646,7 +640,6 @@
               ],
               "src": "649:17:4"
             },
-            "payable": false,
             "returnParameters": {
               "id": 264,
               "nodeType": "ParameterList",
@@ -696,8 +689,7 @@
             "documentation": null,
             "id": 274,
             "implemented": true,
-            "isConstructor": false,
-            "isDeclaredConst": false,
+            "kind": "function",
             "modifiers": [
               {
                 "arguments": null,
@@ -743,6 +735,7 @@
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "786:7:4",
+                    "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
                       "typeString": "address"
@@ -754,7 +747,6 @@
               ],
               "src": "785:17:4"
             },
-            "payable": false,
             "returnParameters": {
               "id": 272,
               "nodeType": "ParameterList",
@@ -777,8 +769,7 @@
             "documentation": null,
             "id": 278,
             "implemented": true,
-            "isConstructor": false,
-            "isDeclaredConst": false,
+            "kind": "function",
             "modifiers": [],
             "name": "renounceRetailer",
             "nodeType": "FunctionDefinition",
@@ -788,7 +779,6 @@
               "parameters": [],
               "src": "926:2:4"
             },
-            "payable": false,
             "returnParameters": {
               "id": 276,
               "nodeType": "ParameterList",
@@ -811,8 +801,7 @@
             "documentation": null,
             "id": 284,
             "implemented": true,
-            "isConstructor": false,
-            "isDeclaredConst": false,
+            "kind": "function",
             "modifiers": [],
             "name": "_addRetailer",
             "nodeType": "FunctionDefinition",
@@ -838,6 +827,7 @@
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1062:7:4",
+                    "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
                       "typeString": "address"
@@ -849,7 +839,6 @@
               ],
               "src": "1061:17:4"
             },
-            "payable": false,
             "returnParameters": {
               "id": 282,
               "nodeType": "ParameterList",
@@ -872,8 +861,7 @@
             "documentation": null,
             "id": 290,
             "implemented": true,
-            "isConstructor": false,
-            "isDeclaredConst": false,
+            "kind": "function",
             "modifiers": [],
             "name": "_removeRetailer",
             "nodeType": "FunctionDefinition",
@@ -899,6 +887,7 @@
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1226:7:4",
+                    "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
                       "typeString": "address"
@@ -910,7 +899,6 @@
               ],
               "src": "1225:17:4"
             },
-            "payable": false,
             "returnParameters": {
               "id": 288,
               "nodeType": "ParameterList",
@@ -932,9 +920,15 @@
   },
   "compiler": {
     "name": "solc",
-    "version": "0.4.24+commit.e67f0147.Emscripten.clang"
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
   },
   "networks": {},
-  "schemaVersion": "2.0.1",
-  "updatedAt": "2021-07-10T07:27:08.600Z"
+  "schemaVersion": "3.0.23",
+  "updatedAt": "2021-07-10T10:45:00.172Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
 }

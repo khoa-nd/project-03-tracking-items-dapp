@@ -1,9 +1,10 @@
 pragma solidity ^0.5.16;
 
 import "../coffeeaccesscontrol/RetailerRole.sol";
+import "../coffeeaccesscontrol/ConsumerRole.sol";
 
 // Define a contract 'Supplychain'
-contract SupplyChain is RetailerRole {
+contract SupplyChain is RetailerRole, ConsumerRole {
 
     // Define 'owner'
     address payable owner;
@@ -129,7 +130,7 @@ contract SupplyChain is RetailerRole {
 
     // Define a modifier that checks if an item.state of a upc is Received
     modifier received(uint _upc) {
-        require(items[_upc].itemState == State.Received);
+        require(items[_upc].itemState >= State.Received);
         _;
     }
 
@@ -268,13 +269,16 @@ contract SupplyChain is RetailerRole {
     // Use the above modifiers to check if the item is received
     function purchaseItem(uint _upc) public
         // Call modifier to check if upc has passed previous supply chain stage
-
+        received(_upc)
         // Access Control List enforced by calling Smart Contract / DApp
+        onlyConsumer
     {
         // Update the appropriate fields - ownerID, consumerID, itemState
-
+        items[_upc].ownerID = msg.sender;
+        items[_upc].consumerID = msg.sender;
+        items[_upc].itemState = State.Purchased;
         // Emit the appropriate event
-
+        emit Purchased(_upc);
     }
 
     // Define a function 'fetchItemBufferOne' that fetches the data

@@ -2,9 +2,10 @@ pragma solidity ^0.5.16;
 
 import "../coffeeaccesscontrol/RetailerRole.sol";
 import "../coffeeaccesscontrol/ConsumerRole.sol";
+import "../coffeeaccesscontrol/DistributorRole.sol";
 
 // Define a contract 'Supplychain'
-contract SupplyChain is RetailerRole, ConsumerRole {
+contract SupplyChain is DistributorRole, RetailerRole, ConsumerRole {
 
     // Define 'owner'
     address payable owner;
@@ -214,7 +215,7 @@ contract SupplyChain is RetailerRole, ConsumerRole {
         emit ForSale(_upc);
     }
 
-    // Define a function 'buyItem' that allows the disributor to mark an item 'Sold'
+    // Define a function 'buyItem' that allows the distributor to mark an item 'Sold'
     // Use the above defined modifiers to check if the item is available for sale, if the buyer has paid enough,
     // and any excess ether sent is refunded back to the buyer
     function buyItem(uint _upc) public payable
@@ -242,7 +243,7 @@ contract SupplyChain is RetailerRole, ConsumerRole {
         // Call modifier to check if upc has passed previous supply chain stage
         sold(_upc)
         // Call modifier to verify caller of this function
-        verifyCaller(items[_upc].distributorID)
+        onlyDistributor
     {
         // Update the appropriate fields
         items[_upc].itemState = State.Shipped;

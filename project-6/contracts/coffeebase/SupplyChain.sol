@@ -208,6 +208,7 @@ contract SupplyChain is RetailerRole, ConsumerRole {
         verifyCaller(items[_upc].originFarmerID)
     {
         // Update the appropriate fields
+        items[_upc].productPrice = _price;
         items[_upc].itemState = State.ForSale;
         // Emit the appropriate event
         emit ForSale(_upc);
@@ -336,6 +337,7 @@ contract SupplyChain is RetailerRole, ConsumerRole {
         itemUPC = items[_upc].upc;
         productID = items[_upc].productID;
         productNotes = items[_upc].productNotes;
+        productPrice = items[_upc].productPrice;
         itemState = uint(items[_upc].itemState);
         distributorID = items[_upc].distributorID;
         retailerID = items[_upc].retailerID;

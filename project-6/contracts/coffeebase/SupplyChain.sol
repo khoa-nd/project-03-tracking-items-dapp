@@ -1,6 +1,9 @@
 pragma solidity ^0.5.16;
+
+import "../coffeeaccesscontrol/RetailerRole.sol";
+
 // Define a contract 'Supplychain'
-contract SupplyChain {
+contract SupplyChain is RetailerRole {
 
     // Define 'owner'
     address payable owner;
@@ -108,19 +111,19 @@ contract SupplyChain {
 
     // Define a modifier that checks if an item.state of a upc is ForSale
     modifier forSale(uint _upc) {
-        require(items[_upc].itemState == State.ForSale);
+        require(items[_upc].itemState >= State.ForSale);
         _;
     }
 
     // Define a modifier that checks if an item.state of a upc is Sold
     modifier sold(uint _upc) {
-        require(items[_upc].itemState == State.Sold);
+        require(items[_upc].itemState >= State.Sold);
         _;
     }
 
     // Define a modifier that checks if an item.state of a upc is Shipped
     modifier shipped(uint _upc) {
-        require(items[_upc].itemState == State.Shipped);
+        require(items[_upc].itemState >= State.Shipped);
         _;
     }
 
@@ -235,27 +238,30 @@ contract SupplyChain {
     // Use the above modifers to check if the item is sold
     function shipItem(uint _upc) public
         // Call modifier to check if upc has passed previous supply chain stage
-
+        sold(_upc)
         // Call modifier to verify caller of this function
-
+        verifyCaller(items[_upc].distributorID)
     {
         // Update the appropriate fields
-
+        items[_upc].itemState = State.Shipped;
         // Emit the appropriate event
-
+        emit Shipped(_upc);
     }
 
     // Define a function 'receiveItem' that allows the retailer to mark an item 'Received'
     // Use the above modifiers to check if the item is shipped
     function receiveItem(uint _upc) public
         // Call modifier to check if upc has passed previous supply chain stage
-
+        shipped(_upc)
         // Access Control List enforced by calling Smart Contract / DApp
+        onlyRetailer
     {
         // Update the appropriate fields - ownerID, retailerID, itemState
-
+        items[_upc].ownerID = msg.sender;
+        items[_upc].retailerID = msg.sender;
+        items[_upc].itemState = State.Received;
         // Emit the appropriate event
-
+        emit Received(_upc);
     }
 
     // Define a function 'purchaseItem' that allows the consumer to mark an item 'Purchased'

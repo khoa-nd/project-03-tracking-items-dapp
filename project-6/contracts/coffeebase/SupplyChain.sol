@@ -243,7 +243,7 @@ contract SupplyChain is DistributorRole, RetailerRole, ConsumerRole {
         // Call modifier to check if upc has passed previous supply chain stage
         sold(_upc)
         // Call modifier to verify caller of this function
-        onlyDistributor
+        verifyCaller(items[_upc].distributorID)
     {
         // Update the appropriate fields
         items[_upc].itemState = State.Shipped;

@@ -12,7 +12,5 @@
 ## truffle-hdwallet-provider: ^1.0.17
 
 # IPFS
-N/A
-
-# General Write Up
+Not used IPFS in this project
     
